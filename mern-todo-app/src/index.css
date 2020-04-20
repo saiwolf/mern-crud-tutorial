@@ -13,5 +13,18 @@ code {
 }
 
 .completed {
+  background-color: #d4edda;
+  color: #155724;
   text-decoration: line-through;
+}
+
+.link_completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.link_completed > a {  
+  color: inherit !important;
+  font-weight: bold;
+  text-decoration: underline;
 }
