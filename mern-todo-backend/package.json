@@ -2,6 +2,7 @@
   "name": "mern-todo-backend",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
