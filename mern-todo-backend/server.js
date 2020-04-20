@@ -67,6 +67,19 @@ todoRoutes.route('/update/:id').post(function(req, res) {
     });
 });
 
+todoRoutes.route('/delete/:id').post(function(req, res) {
+    Todo.findByIdAndDelete(req.params.id, function(err) {
+        if(err)
+        {
+            console.error("Deletion failed.");
+            res.status(400).send("Deletion failed.");
+        } else {
+            console.log("Deleted item: "+req.params.id);
+            res.json(`Todo with ID: ${req.params.id} deleted.`);
+        }
+    });
+});
+
 app.use('/todos', todoRoutes);
 
 app.listen(PORT, function() {
